@@ -18,7 +18,7 @@ body {
 header {
     /* hereda color de body */
     background-color: #c5bb2d;
-    font: 400 1.4em Verdana, sans-serif;
+    font: 400 1.3em Verdana, sans-serif;
     text-transform: uppercase;
     text-align: center;
 }
