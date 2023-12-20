@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<kml>
+	<Document>
+		<Placemark>
+			<name>Isla Borneo</name>
+			<Point>
+				<coordinates>114.64303045745362,-3.3257060075587073,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Martapura</name>
+			<Point>
+				<coordinates>114.86497430839037,-3.4066569118480117,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Binuang</name>
+			<Point>
+				<coordinates>115.10668750762285,-3.1702094265330576,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lapangan Dwiwarna</name>
+			<Point>
+				<coordinates>115.64263705627333,-2.5625716016472584,0.0</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>

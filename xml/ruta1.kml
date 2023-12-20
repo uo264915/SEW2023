@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<kml>
+	<Document>
+		<Placemark>
+			<name>Isla Java</name>
+			<Point>
+				<coordinates>106.829,-6.20199,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Monumen Nasional</name>
+			<Point>
+				<coordinates>106.65369,-6.12751,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bandung</name>
+			<Point>
+				<coordinates>107.6186100,-6.9038900,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cirebon</name>
+			<Point>
+				<coordinates>108.567,-6.71667,0.0</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>

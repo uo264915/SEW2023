@@ -1,0 +1,23 @@
+/* Pablo Fernando Urones Clavera    UO264915  */
+
+
+/* especificidad = 001 */
+table {
+    max-width: 90%;
+    margin: 2%;
+}
+
+/* especificidad = 001 */
+td {
+    padding: 0.5em;
+}
+
+/* especificidad = 001 */
+tr {
+    padding: 0.25em;
+}
+
+
+
+
+

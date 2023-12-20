@@ -1,0 +1,108 @@
+/* Pablo Fernando Urones Clavera    UO264915  */
+
+/* 
+  Black     #000000
+  Soft Green     #706e6ecc
+  Yellow Mustard    #c5bb2d
+*/
+
+/* especificidad = 001 */
+body {
+    font: 400 1em Verdana, sans-serif;
+    line-height: 2em;
+    color: #000000;
+    background-color: #bed1c8;
+}
+
+/* especificidad = 001 */
+header {
+    /* hereda color de body */
+    background-color: #c5bb2d;
+    font: 400 1.4em Verdana, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* especificidad = 001, 001, 001, 001, 001 */
+h2, h3, h4, h5, h6 {
+    /* heredan color de body */
+    background-color: #c5bb2d;
+    text-decoration: underline;
+    font: 400 1.3em Verdana, sans-serif;
+}
+
+/* especificidad = 001 */
+nav {
+    font-size: 1.2em;
+}
+
+/* especificidad = 001, 001, 001 */
+ul, ol, dl {
+    border-width: 0.3em;
+    border-bottom-left-radius: 3.1em;
+    border-top-left-radius: 3.1em;
+}
+
+/* especificidad = 011 */
+li[id="destacar"]{
+    font-weight: bold;
+}
+
+/* especificidad = 001 */
+dt {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* especificidad = 001 */
+footer {
+    /* hereda color de body */
+    background-color: #c5bb2d;
+    margin-top: 2%;
+}
+
+
+/* especificidad = 001 */
+img {
+    width: 15%;
+    height:  20%;
+}
+
+/* especificidad = 001 */
+table {
+    border: 0.2em solid black;
+    align-content: center;
+    max-width: 50%;
+}
+
+/* especificidad = 001 */
+td {
+    text-align: center;
+}
+
+/* especificidad = 001 */
+tr {
+    text-align: center;
+}
+
+/* especificidad = 001 */
+th {
+    /* hereda color de body */    
+    background-color: #c5bb2d;
+    padding: 0.5em;
+}
+
+
+/* especificidad = 001 */
+a{
+    text-decoration: none;
+}
+
+/* especificidad = 001 */
+video {
+    height: auto;
+    max-width: 15em;
+}
+
+
+

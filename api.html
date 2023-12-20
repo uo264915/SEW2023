@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>API</title>
+    <meta name="description" content="api, canvas, file">
+    <meta name="author" content="Pablo Urones Clavera">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/api.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/api.js"></script>
+</head>
+<body onload="loader()">
+<header><h1>API</h1></header>
+    <main>
+    <section>
+        <h2>Archivo</h2>
+            <p title="codigo">Código del archivo</p>
+            <label for="files" >Archivo</label>
+            <input type="file" id="files" title="files" onchange="apiFile.processFiles();">
+    </section>
+    <section>
+        <h2>Datos meteorológicos y figuras</h2>
+        <canvas title="rect"></canvas>
+        <p>Pulse para obtener el tiempo en Madrid</p>
+        <button onclick="meteo.verJSON()">Cargar datos</button>
+        <p title="datos">Datos meteorológicos:</p>
+    </section>
+</main>
+</body>
+</html>

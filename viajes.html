@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Pablo Fernando Urones Clavera" />
+    <meta name ="description" content ="Documento con los viajes" />
+    <meta name ="keywords" content ="rellenar" />
+    <meta name ="viewport" content ="width=device-width, initial scale=1.0" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/viajes.js"></script>
+
+    <title>Escritorio Virtual</title>
+    <!-- añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/viajes.css" />
+    <link rel="icon" href="multimedia/favicon.ico">
+</head>
+
+<body>
+    <header><h1>Escritorio Virtual - Viajes</h1></header>
+    <nav>
+      <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
+      <a href="sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+      <a href="noticias.html" accesskey="N" tabindex="3">Noticias</a>
+      <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
+      <a href="meteorologia.html" accesskey="M" tabindex="5">Meteorologia</a>
+      <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
+      <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+  </nav>
+  <main>
+    <section title="ubicacion">
+      <h2>Geolocalización con manejo de errores</h2>    
+      <p>Pulse el botón para obtener la geolocalización</p>
+      <button onclick="localizacion.verTodo()">Obtener geolocalización</button>
+    </section>
+    <section title="estatico">
+      <h2>Mapa estático</h2>    
+      <p>Pulse el botón para obtener el mapa estático</p>
+      <button title="estatico" onclick="localizacion.getMapaEstatico()">Obtener mapa estático</button>
+    </section>
+    <section id="dinamico" title="dinamico">
+      <h2>Mapa dinámico</h2>    
+      <p>Pulse el botón para obtener el mapa dinámico</p>
+      <button title="dinamico" onclick="localizacion.getMapaDinamico()">Obtener mapa dinámico</button>
+    </section>
+    <section title="unico">
+      <h2>Cargar XML</h2>    
+      <p>Pulse el botón para cargar un archivo XML</p>
+      <label for="xml">Seleccionar archivo</label>
+      <input type="file" id="xml" title="unico"  onchange="localizacion.mostrarXML(files);">
+    </section>
+    <section title="multiple">
+      <h2>Cargar KML</h2>    
+      <p>Pulse el botón para cargar un archivo KML en el mapa</p>
+      <label for="kml">Seleccionar archivos</label>
+      <input type="file" id="kml" title="multiple"  onchange="localizacion.mostrarKML(files);" multiple>
+    </section>
+
+  </main>
+</body>
+</html>

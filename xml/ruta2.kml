@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<kml>
+	<Document>
+		<Placemark>
+			<name>Isla Sumatra</name>
+			<Point>
+				<coordinates>104.07017071841885,-5.4008603258356045,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pantai Melasti</name>
+			<Point>
+				<coordinates>104.08358918992543,-5.398883265056443,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pantai Biha</name>
+			<Point>
+				<coordinates>104.00886759781427,-5.323698018480774,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Pantai Tanjung Setia Krui Lampung</name>
+			<Point>
+				<coordinates>103.99940008434265,-5.302125839197073,0.0</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>

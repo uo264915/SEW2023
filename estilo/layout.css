@@ -1,0 +1,44 @@
+/* Pablo Fernando Urones Clavera    UO264915  */
+
+
+/* especificidad = 001 */
+body {
+  gap: 0.625em;
+  padding: 0.625em;
+}
+
+/* especificidad = 001 */
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.25em;
+  font-size: 1.875em;
+}
+
+/* especificidad = 001 */
+nav a {
+  padding-right: 2%;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+}
+
+/* especificidad = 001 */
+h1 {
+  flex: auto;
+  text-align: center;
+}
+
+/* especificidad = 001 */
+main {
+  padding-top: 2.5em;
+  padding-left: 0.3em;
+}
+
+/* especificidad = 001 */
+footer {
+  padding: 0.1em;
+}
+
+
+

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rutas SYSTEM "rutas.dtd">
+<rutas>
+    <ruta>
+    <nombre>Isla Java</nombre>
+    <tipoRuta>Turística</tipoRuta>
+    <transporte>Coche</transporte>
+    <duracion>P0Y0M0DT5H25M</duracion>
+    <agencia>Sin agencia</agencia>
+    <descripcion>Visita por la isla de Java</descripcion>
+    <personasAdecuadas>Se puede ir con niños</personasAdecuadas>
+    <lugarInicio>Aeropuerto Internacional Soekarno-Hatta</lugarInicio>
+    <direccionInicio>Pajang, Tangerang City, Banten, Indonesia</direccionInicio>
+    <coordenadas longitud="106.829" latitud="-6.20199" altitud="8.0"></coordenadas>
+    <referencias>
+        <referencia>https://es.wikipedia.org/wiki/Yakarta</referencia>
+        <referencia>https://es.db-city.com/Indonesia--Jakarta--Yakarta</referencia>
+        <referencia>https://www.mundo-nomada.com/indonesia/que-ver-y-hacer-en-yakarta</referencia>
+    </referencias>
+    <recomendacion>8</recomendacion>
+    <hitos>
+        <hito>
+            <nombreHito>Monumen Nasional</nombreHito>
+            <descripcionHito>Monumento principal de Yakarta</descripcionHito>
+            <coordenadasHito longitud="106.65369" latitud="-6.12751" altitud="132.0"></coordenadasHito>
+            <distanciaAnterior unidades="minutos">45</distanciaAnterior>
+            <fotografias>
+                <fotografia src="multimedia/yakarta.jpg">Yakarta</fotografia>
+            </fotografias>
+        </hito>
+        <hito>
+            <nombreHito>Bandung</nombreHito>
+            <descripcionHito>Ciudad central de la isla de Java</descripcionHito>
+            <coordenadasHito longitud="107.6186100" latitud="-6.9038900" altitud="802.0"></coordenadasHito>
+            <distanciaAnterior unidades="minutos">140</distanciaAnterior>
+            <fotografias>
+                <fotografia src="multimedia/bandung.jpg">Bandung</fotografia>
+            </fotografias>
+        </hito>
+        <hito>
+            <nombreHito>Cirebon</nombreHito>
+            <descripcionHito>Ciudad nordica costera </descripcionHito>
+            <coordenadasHito longitud="108.567" latitud="-6.71667" altitud="9.0"></coordenadasHito>
+            <distanciaAnterior unidades="minutos">130</distanciaAnterior>
+            <fotografias>
+                <fotografia src="multimedia/cirebon.jpg">Cirebon</fotografia>
+            </fotografias>
+        </hito>
+    </hitos>
+    </ruta>
+
+
+
+
+    <ruta>
+        <nombre>Isla Sumatra</nombre>
+        <tipoRuta>Costera</tipoRuta>
+        <transporte>A pie</transporte>
+        <duracion>P0Y0M0DT4H10M</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>Ruta por la isla de Sumatra</descripcion>
+        <personasAdecuadas>Personas en buena forma física</personasAdecuadas>
+        <lugarInicio>Pantai Rumput Hijau</lugarInicio>
+        <direccionInicio>H3WC+R4X, Marang, South Pesisir, West Lampung Regency, Lampung, Indonesia</direccionInicio>
+        <coordenadas longitud="104.07017071841885" latitud="-5.4008603258356045" altitud="8.0"></coordenadas>
+        <referencias>
+            <referencia>https://es.wikipedia.org/wiki/Sumatra</referencia>
+            <referencia>https://www.mundo-nomada.com/indonesia/la-isla-de-sumatra-naturaleza-salvaje-en-indonesia</referencia>
+            <referencia>https://www.expedia.es/Sumatra.dx6049206</referencia>
+        </referencias>
+        <recomendacion>7</recomendacion>
+        <hitos>
+            <hito>
+                <nombreHito>Pantai Melasti</nombreHito>
+                <descripcionHito>Playa de la isla de Sumatra</descripcionHito>
+                <coordenadasHito longitud="104.08358918992543" latitud="-5.398883265056443" altitud="2.0"></coordenadasHito>
+                <distanciaAnterior unidades="minutos">20</distanciaAnterior>
+                <fotografias>
+                    <fotografia src="multimedia/melasti.jpg">Melasti</fotografia>
+                </fotografias>
+            </hito>
+            <hito>
+                <nombreHito>Pantai Biha</nombreHito>
+                <descripcionHito>Playa de la isla de Sumatra</descripcionHito>
+                <coordenadasHito longitud="104.00886759781427" latitud="-5.323698018480774" altitud="4.0"></coordenadasHito>
+                <distanciaAnterior unidades="minutos">110</distanciaAnterior>
+                <fotografias>
+                    <fotografia src="multimedia/biha.jpg">Biha</fotografia>
+                </fotografias>
+            </hito>
+            <hito>
+                <nombreHito>Pantai Tanjung Setia Krui Lampung</nombreHito>
+                <descripcionHito>Playa de la isla de Sumatra</descripcionHito>
+                <coordenadasHito longitud="103.99940008434265" latitud="-5.302125839197073" altitud="2.0"></coordenadasHito>
+                <distanciaAnterior unidades="minutos">210</distanciaAnterior>
+                <fotografias>
+                    <fotografia src="multimedia/tanjung.jpg">Tanjung</fotografia>
+                </fotografias>
+            </hito>
+        </hitos>
+        </ruta>
+
+
+
+
+
+
+        <ruta>
+            <nombre>Isla Borneo</nombre>
+            <tipoRuta>Turística</tipoRuta>
+            <transporte>Coche</transporte>
+            <duracion>P0Y0M0DT3H41M</duracion>
+            <agencia>Sin agencia</agencia>
+            <descripcion>Ruta el sur de la isla de Borneo</descripcion>
+            <personasAdecuadas>Se puede ir con niños</personasAdecuadas>
+            <lugarInicio>Banjarmasin</lugarInicio>
+            <direccionInicio>Jl. Keramat Basirih No.RT.13, Basirih, Kec. Banjarmasin Bar., Kota Banjarmasin, Kalimantan Selatan 70112, Indonesia</direccionInicio>
+            <coordenadas longitud="114.64303045745362" latitud="-3.3257060075587073" altitud="1.0"></coordenadas>
+            <referencias>
+                <referencia>https://es.wikipedia.org/wiki/Banjarmasin</referencia>
+                <referencia>https://es.wikipedia.org/wiki/Provincia_de_Borneo_Meridional</referencia>
+                <referencia>https://es.wikipedia.org/wiki/Indonesia</referencia>
+            </referencias>
+            <recomendacion>8</recomendacion>
+            <hitos>
+                <hito>
+                    <nombreHito>Martapura</nombreHito>
+                    <descripcionHito>Localidad sureña de Borneo</descripcionHito>
+                    <coordenadasHito longitud="114.86497430839037" latitud="-3.4066569118480117" altitud="22.0"></coordenadasHito>
+                    <distanciaAnterior unidades="minutos">49</distanciaAnterior>
+                    <fotografias>
+                        <fotografia src="multimedia/martapura.jpg">Martapura</fotografia>
+                    </fotografias>
+                </hito>
+                <hito>
+                    <nombreHito>Binuang</nombreHito>
+                    <descripcionHito>Localidad sureste de la isla de Borneo</descripcionHito>
+                    <coordenadasHito longitud="115.10668750762285" latitud="-3.1702094265330576" altitud="15.0"></coordenadasHito>
+                    <distanciaAnterior unidades="minutos">52</distanciaAnterior>
+                    <fotografias>
+                        <fotografia src="multimedia/binuang.jpg">Binuang</fotografia>
+                    </fotografias>
+                </hito>
+                <hito>
+                    <nombreHito>Lapangan Dwiwarna</nombreHito>
+                    <descripcionHito>Localidad sureste de Borneo</descripcionHito>
+                    <coordenadasHito longitud="115.64263705627333" latitud="-2.5625716016472584" altitud="24.0"></coordenadasHito>
+                    <distanciaAnterior unidades="minutos">120</distanciaAnterior>
+                    <fotografias>
+                        <fotografia src="multimedia/lapangan.jpg">Lapangan</fotografia>
+                    </fotografias>
+                </hito>
+            </hitos>
+            </ruta>
+    
+</rutas>

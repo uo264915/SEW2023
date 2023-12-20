@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Pablo Fernando Urones Clavera" />
+    <meta name ="description" content ="Documento con la agenda" />
+    <meta name ="keywords" content ="rellenar" />
+    <meta name ="viewport" content ="width=device-width, initial scale=1.0" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/agenda.js"></script>
+
+    <title>Escritorio Virtual</title>
+    <!-- añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />  
+    <link rel="stylesheet" type="text/css" href="estilo/agenda.css" />  
+    <link rel="icon" href="multimedia/favicon.ico">
+</head>
+
+<body>
+    <header><h1>Escritorio Virtual - Agenda</h1></header>
+        <nav>
+            <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
+            <a href="sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+            <a href="noticias.html" accesskey="N" tabindex="3">Noticias</a>
+            <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
+            <a href="meteorologia.html" accesskey="M" tabindex="5">Meteorologia</a>
+            <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
+            <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+        </nav>
+        <main>
+            <section>
+                <h2>Carreras Fórmula 1: Temporada 2023</h2>
+                <p>Pulse el botón para consultar la información de la Fórmula 1</p>
+                <button onclick="agenda.mostrar()">Obtener información</button>
+            </section>
+        </main>
+</body>
+</html>

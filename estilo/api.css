@@ -1,0 +1,33 @@
+/* Pablo Fernando Urones Clavera    UO264915  */
+
+
+/* especificidad = 001 */
+body {
+    font: 400 1em Verdana, sans-serif;
+    line-height: 2em;
+    color: #000000;
+    background-color: #bed1c8;
+}
+
+/* especificidad = 001 */
+header {
+    /* hereda color de body */
+    background-color: #c5bb2d;
+    font: 400 1.4em Verdana, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* especificidad = 001 */
+h2 {
+    /* heredan color de body */
+    background-color: #c5bb2d;
+    text-decoration: underline;
+    font: 400 1.3em Verdana, sans-serif;
+}
+
+/* especificidad = 001 */
+canvas{
+    height: 10%;
+    width: 25%;
+}

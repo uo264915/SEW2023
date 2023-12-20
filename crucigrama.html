@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Pablo Fernando Urones Clavera" />
+    <meta name ="description" content ="Documento con el crucigrama matemático" />
+    <meta name ="keywords" content ="rellenar" />
+    <meta name ="viewport" content ="width=device-width, initial scale=1.0" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/crucigrama.js"></script>
+
+    <title>Escritorio Virtual</title>
+    <!-- <link rel="icon" href="multimedia/imagenes/favicon.ico"> añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/juegos.css" />  
+    <link rel="stylesheet" type="text/css" href="estilo/crucigrama.css" />  
+    <link rel="icon" href="multimedia/favicon.ico">
+    
+</head>
+
+<body>
+    <header><h1>Escritorio Virtual - Crucigrama</h1></header>
+        <nav>
+            <a href="index.html" accesskey="I" tabindex="1">Inicio</a>
+            <a href="sobremi.html" accesskey="S" tabindex="2">Sobre mi</a>
+            <a href="noticias.html" accesskey="N" tabindex="3">Noticias</a>
+            <a href="agenda.html" accesskey="A" tabindex="4">Agenda</a>
+            <a href="meteorologia.html" accesskey="M" tabindex="5">Meteorologia</a>
+            <a href="viajes.html" accesskey="V" tabindex="6">Viajes</a>
+            <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+        </nav>
+        <nav title="juegos">
+            <a href="memoria.html">Memoria</a>
+            <a href="sudoku.html">Sudoku</a>
+            <a href="crucigrama.html">Crucigrama</a>
+    
+        </nav>
+        <main>
+            
+        </main>
+        <script>
+
+            crucigrama.paintMathword();
+            document.addEventListener('keydown', (event) => {
+            crucigrama.selectedCell = event.target;
+            const validas = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/'];
+            if (crucigrama.selectedCell) {
+                if (validas.includes(event.key)) {
+                    crucigrama.introduceElement(event.key);
+                } else {
+                    alert('No válido, seleccione un número del 1 al 9 o un signo aritmetico: + - * /.');
+                }
+            } else {
+                alert('Seleccione una celda antes de pulsar un número.');
+            }
+        });
+        
+        </script>
+</body>
+</html>
