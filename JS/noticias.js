@@ -26,17 +26,18 @@ class Noticias {
                 let index = 0;
                 for (let i = 0; i < noticias.length; i++) {
                     var n = noticias[i].split('_');
-                    $("[title='resultado']").append("<h3>Noticia nueva</h3>");
-                    $("[title='resultado']").append("<p>Titular: " + n[index] + "</p>");
+                    var noticia = "<h3>Noticia nueva</h3>";
+                    noticia += "<p>Titular: " + n[index] + "</p>";
                     index++;
-                    $("[title='resultado']").append("<p>Entradilla: " + n[index] + "</p>");
+                    noticia += "<p>Entradilla: " + n[index] + "</p>";
                     index++;
-                    $("[title='resultado']").append("<p>Descripción: " + n[index] + "</p>");
+                    noticia += "<p>Descripción: " + n[index] + "</p>";
                     index++;
-                    $("[title='resultado']").append("<p>Autor: " + n[index] + "</p>");
+                    noticia += "<p>Autor: " + n[index] + "</p>";
                     index = 0;
+                    $("[title='resultado']").after(noticia);
+                    
                 }
-            //$("[title='resultado']").append("<p>Ficheros: " + lector.result + "</p>");
             }      
             lector.readAsText(archivo);
         }
@@ -56,11 +57,12 @@ class Noticias {
         var autor = document.querySelector('input[title="autor"]').value;
         var compruebaAutor = /[a-zA-Z]/.test(autor);
         if (compruebaTit && compruebaEntr && compruebaDesc && compruebaAutor){
-            $("[title='resultado']").append("<h3>Noticia nueva</h3>");
-            $("[title='resultado']").append("<p>Titular: " + titular + "</p>");
-            $("[title='resultado']").append("<p>Entradilla: " + entradilla + "</p>");
-            $("[title='resultado']").append("<p>Descripción: " + descripcion + "</p>");
-            $("[title='resultado']").append("<p>Autor: " + autor + "</p>");
+            var noticia = "<h3>Noticia nueva</h3>";
+            noticia += "<p>Titular: " + titular + "</p>";
+            noticia += "<p>Entradilla: " + entradilla + "</p>";
+            noticia += "<p>Descripción: " + descripcion + "</p>";
+            noticia += "<p>Autor: " + autor + "</p>";
+            $("[title='central']").find("p").last().after(noticia);
         }
         else{
             window.alert("Tiene que rellenar todos los espacios");

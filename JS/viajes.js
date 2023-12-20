@@ -40,7 +40,7 @@ class Geolocalización {
     }
     verTodo(){
         var ubicacion=document.querySelector('section[title="ubicacion"]');
-        var datos='<p>'+ this.mensaje + '</p>'; 
+        var datos='<h2>Tiempo</h2><p>'+ this.mensaje + '</p>'; 
         datos+='<p>Longitud: '+this.longitud +' grados</p>'; 
         datos+='<p>Latitud: '+this.latitud +' grados</p>';
         datos+='<p>Precisión de la longitud y latitud: '+ this.precision +' metros</p>';

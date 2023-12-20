@@ -25,5 +25,6 @@ main p {
 
 /* especificidad = 011 */
 p[data-state="empty"]{
+  /* heredan color de body */
   background-color: black;
 }

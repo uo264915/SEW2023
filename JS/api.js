@@ -26,14 +26,12 @@ class ApiFile {
 
     processFiles() {
         this.files = $("[title='files']")[0].files;
-        $("[title='codigo']").empty();
         this.showNumberFiles();
         this.calculateSize();
-        this.showListFiles();
     }
 
     showNumberFiles() {
-        $("[title='codigo']").append("<p>Ficheros seleccionados: " + this.files.length + "</p>");
+        $("[title='codigo']").after("<p>Ficheros seleccionados: " + this.files.length + "</p>");
     }
 
     calculateSize() {
@@ -41,19 +39,9 @@ class ApiFile {
         for (let i = 0; i < this.files.length; i++) {
             nBytes += this.files[i].size;
         }
-        $("[title='codigo']").append("<p>Tamaño total: " + nBytes + " bytes </p>");
+        $("[title='codigo']").after("<p>Tamaño total: " + nBytes + " bytes </p>");
     }
 
-    showListFiles() {
-        let content = '';
-        content += "<h3>Ficheros seleccionados</h3>";
-        content += "<ul id='listFile'>";
-        for (let i = 0; i < this.files.length; i++) {
-            this.showContentFile(this.files[i]);
-        }
-        content += "</ul>";
-        $("[title='codigo']").append(content)
-    }
 
     showContentFile(file) {
         const reader = new FileReader();
@@ -107,7 +95,6 @@ class Meteo {
             url: this.url,
             method: 'GET',
             success: function(datos){
-                $("pre").text(JSON.stringify(datos, null, 2)); //muestra el json en un elemento pre
                     var stringDatos = "<ul><li>Ciudad: " + datos.name + "</li>";
                         stringDatos += "<li>País: " + datos.sys.country + "</li>";
                         stringDatos += "<li>Latitud: " + datos.coord.lat + " grados</li>";
@@ -127,7 +114,7 @@ class Meteo {
                         stringDatos += "<li>Visibilidad: " + datos.visibility + " metros</li>";
                         stringDatos += "<li>Nubosidad: " + datos.clouds.all + " %</li></ul>";               
 
-                        $("[title='datos']").append(stringDatos);
+                        $("[title='datos']").after(stringDatos);
                 },
         });   
     }

@@ -18,6 +18,7 @@ h4 {
     font: 400 1em Verdana, sans-serif;
 }
 
+/* especificidad = 001 */
 img {
     width: 25%;
     height: 90%;

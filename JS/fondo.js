@@ -21,9 +21,10 @@ class Fondo {
                         if ( i === 20 ) {
                                 return false;
                         }
-                    });
-        });
-        $(html).css("background-image", "https://live.staticflickr.com/65535/53375900893_d0f6f65784_m.jpg");    
+                        $('body').css('background-image', 'url('+item.media.m+')');  
+                    }); 
+                    $('html').find('img').remove();
+        });  
     }
 
 }
