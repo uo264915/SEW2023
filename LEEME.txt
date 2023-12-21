@@ -1,0 +1,3 @@
+Los errores con el mapa dinámico no los tengo en cuenta como se comento en clase.
+
+Salen errores de adaptabilidad en agenda.html, meteorologia.html y sobremi.html, no obstante, el error que sale se comentó en el foro del campus y se muestra correctamente en el Screenfly.

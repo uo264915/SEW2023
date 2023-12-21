@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name ="description" content ="Documento del juego de sudoku" />
     <meta name ="keywords" content ="sudoku, juego, numero" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="JS/sudoku.js"></script>
 
     <!-- añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
@@ -48,9 +49,8 @@
             if (validas.includes(teclaPulsada)) {
                 sudoku.introduceNumber(teclaPulsada);
             } else {
-                console.log('Debes seleccionar una celda antes de pulsar un número.');
+                alert('Debes seleccionar una celda antes de pulsar un número.');
             }
-
         });
 
 

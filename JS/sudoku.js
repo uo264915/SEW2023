@@ -58,113 +58,68 @@ class Sudoku {
         return; // No hay celda seleccionada
     }
 
+
+    
     let row, col;
-    grid.forEach((cell, index) => {
-        if (cell === selectedCell) {
-            row = Math.floor(index / 9);
-            col = index % 9;
-        }
-    });
+    
+    for (let i = 0; i < grid.length; i++) {
+      if (grid[i].getAttribute('data-state') === 'selected') {
+        let pos = i;
+        row = Math.floor(pos / 9); 
+        col = pos % 9; 
+      }
+    } 
 
-    if (this.esNumeroValido(row, col, number)) {
-        selectedCell.textContent = number;
-        selectedCell.dataset.state = 'correct';
-        selectedCell.removeEventListener('click', this.handleCellClick);
-
-        if (this.sudokuCompleto()) {
-            alert('¡Sudoku completado!');
-        }
-    }
-  }
-
-  esNumeroValidoEnFila(row, number) {
-    for (let i = 0; i < this.columns; i++) {
-        if (this.board[row][i] === number) {
-            return false;
-        }
-    }
-    return true;
-}
-
-esNumeroValidoEnColumna(col, number) {
     for (let i = 0; i < this.rows; i++) {
-        if (this.board[i][col] === number) {
-            return false;
+      for (let j = 0; j < this.columns; j++) {
+        if (grid[i+j].getAttribute('data-state') === 'selected') {
+          let pos = i+j;
+          row = Math.floor(pos / 9); 
+          col = pos % 9; 
         }
-    }
-    return true;
-}
+      }
+    } 
 
-esNumeroValidoEnRegion(startRow, startCol, number) {
-    for (let i = 0; i < 3; i++) {
-        for (let j = 0; j < 3; j++) {
-            if (this.board[i + startRow][j + startCol] === number) {
-                return false;
-            }
-        }
+    //comprobaciones
+    for (let i = 0; i < this.columns; i++) {
+      if (this.board[row][i] == number) {
+        alert("Numero no valido");
+        return;
+      }
     }
-    return true;
-}
 
-esNumeroValido(row, col, number) {
+    for (let i = 0; i < this.rows; i++) {
+      if (this.board[i][col] == number) {
+        alert("Numero no valido");
+        return;
+      }
+    } 
+    
     const startRow = Math.floor(row / 3) * 3;
     const startCol = Math.floor(col / 3) * 3;
-    return (
-        this.esNumeroValidoEnFila(this.board, row, number) &&
-        this.esNumeroValidoEnColumna(this.board, col, number) &&
-        this.esNumeroValidoEnRegion(this.board, startRow, startCol, number)
-    );
-}
-  
-
-
-  sudokuCompleto(){
-    for (let i = 0; i < 9; i++) {
-      const rowSet = new Set();
-      const colSet = new Set();
-      
-      for (let j = 0; j < 9; j++) {
-          const rowValue = this.board[i][j];
-          const colValue = this.board[j][i];
-          
-          if (rowValue === 0 || colValue === 0) {
-              return false; 
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+          if (this.board[i + startRow][j + startCol] == number) {
+            alert("Numero no valido");
+            return;
           }
-          
-          rowSet.add(rowValue);
-          colSet.add(colValue);
-      }
-      
-      if (rowSet.size !== 9 || colSet.size !== 9) {
-          return false; 
       }
     }
+    
+    selectedCell.textContent = number;
+    selectedCell.dataset.state = 'correct';
+    selectedCell.removeEventListener('click', this.handleCellClick);
 
-    // Verificar regiones 3x3
-    for (let row = 0; row < 9; row += 3) {
-        for (let col = 0; col < 9; col += 3) {
-            const regionSet = new Set();
-            
-            for (let i = row; i < row + 3; i++) {
-                for (let j = col; j < col + 3; j++) {
-                    const value = this.board[i][j];
-                    
-                    if (value === 0) {
-                        return false; // Si hay algún valor vacío, el Sudoku no está completo
-                    }
-                    
-                    regionSet.add(value);
-                }
-            }
-            
-            if (regionSet.size !== 9) {
-                return false; // Si hay valores repetidos en una región, no es válido
-            }
-        }
+    for (let i = 0; i < grid.length; i++) {
+      const textContent = grid[i].textContent.trim();
+      if (!textContent || isNaN(textContent)) {
+        return; 
+      }
     }
-
-    return true; // Si todo está bien, el Sudoku está completo y correcto
+    alert("Sudoku completo");
+    return true; 
   }
+  
 
 
 }

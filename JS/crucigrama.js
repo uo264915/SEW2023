@@ -52,7 +52,7 @@ class Crucigrama {
                 if (cellValue === 0) {
                     parrafo.click(function(event) {
                         parrafo.attr('data-state', 'clicked');
-                        this.selectedCell = $(event.target);
+                        this.selectedCell = event.target;
                     });
                 } else if (cellValue === -1) {
                     parrafo.attr('data-state', 'empty');
@@ -81,32 +81,36 @@ class Crucigrama {
 
     calculate_date_difference() {
         
-        if (this.init_time && this.end_time) {
-            const difference = this.end_time - this.init_time;
-            const seconds = Math.floor((difference / 1000) % 60);
-            const minutes = Math.floor((difference / (1000 * 60)) % 60);
-            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-            return "${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}";
-        } else {
-            return "00:00:00";
-        }
+        const difference = this.end_time - this.init_time;
+        const seconds = Math.floor((difference / 1000) % 60);
+        const minutes = Math.floor((difference / (1000 * 60)) % 60);
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        return `${hours.toString()}:${minutes.toString()}:${seconds.toString()}`;
+
     }
 
     introduceElement(value) {
-        //const rowIndex = this.selectedCell.parent().index(); // Índice de la fila
-        //const colIndex = this.selectedCell.index(); // Índice de la columna
+        const selectedCell = document.querySelector('p[data-state="clicked"]');
         const grid = document.querySelectorAll('p');
-
-        const index = Array.from(grid).indexOf(this.selectedCell);
-        const rowIndex = Math.floor(index / this.numColumns);
-        const colIndex = index % this.numColumns;
-
-        // Validar si el valor pulsado está permitido (es un número o un operador aritmético)
-        const validas = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/'];
-        let isNumericOrOperator = false;
-        if (validas.includes(value)) {
-            isNumericOrOperator = true;
+        if (!selectedCell) {
+            return; // No hay celda seleccionada
         }
+
+        //const index = Array.from(grid).indexOf(this.selectedCell);
+       // const rowIndex = Math.floor(index / this.numColumns);
+       // const colIndex = index % this.numColumns;
+
+
+        let rowIndex, colIndex;
+    
+        for (let i = 0; i < grid.length; i++) {
+          if (grid[i].getAttribute('data-state') === 'clicked') {
+            let pos = i;
+            rowIndex = Math.floor(pos / 9); 
+            colIndex = pos % 9; 
+          }
+        } 
+
         // Comprobar si hay una celda seleccionada y si el valor es válido para la casilla seleccionada
         //if (selectedCell && isNumericOrOperator) {
             let expression_row = true;
@@ -156,10 +160,10 @@ class Crucigrama {
             // Realizar la evaluación vertical de la expresión
             if (expression_col) {
                 if (j < this.numRows) {
-                    const first_number = this.boardArray[j - 3][col];
-                    const expression = this.boardArray[j - 2][col];
-                    const second_number = this.boardArray[j - 1][col];
-                    const result = this.boardArray[j + 1][col];
+                    const first_number = this.boardArray[j - 3][colIndex];
+                    const expression = this.boardArray[j - 2][colIndex];
+                    const second_number = this.boardArray[j - 1][colIndex];
+                    const result = this.boardArray[j + 1][colIndex];
                     
                     // Validar expresión verticalmente
                     const expr = [first_number, expression, second_number].join('');
@@ -170,12 +174,14 @@ class Crucigrama {
             }
 
             // Si las comprobaciones son correctas, modificar la celda y su atributo data-state
-            if (expression_row && expression_col) {
-                this.selectedCell.text(value);
-                this.selectedCell.attr('data-state', 'correct').off('click');
+            if (expression_row || expression_col) {
+                selectedCell.textContent = value;
+                selectedCell.dataset.state = 'correct';
+                selectedCell.removeEventListener('click', this.selectedCell);
             } else {
                 // Si hay un error, mostrar una alerta y revertir los cambios
-                this.selectedCell.text(0).attr('data-state', ''); 
+                //this.selectedCell.text(0).attr('data-state', ''); 
+                selectedCell.textContent = "";
                 this.selectedCell = null;
             }
 
