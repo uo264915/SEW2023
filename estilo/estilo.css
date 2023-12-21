@@ -59,6 +59,7 @@ footer {
     /* hereda color de body */
     background-color: #c5bb2d;
     margin-top: 2%;
+    max-width: 90%;
 }
 
 
@@ -73,7 +74,6 @@ table {
     border: 0.2em solid black;
     align-content: center;
     max-width: 50%;
-    font-size: 0.6em;
 }
 
 /* especificidad = 001 */
