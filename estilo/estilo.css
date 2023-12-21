@@ -73,6 +73,7 @@ table {
     border: 0.2em solid black;
     align-content: center;
     max-width: 50%;
+    font-size: 0.6em;
 }
 
 /* especificidad = 001 */
@@ -101,7 +102,7 @@ a{
 audio {
     display: block;
     margin-top: 1%;
-    max-width: 50%;
+    max-width: 70%;
 }
 
 /* especificidad = 001 */
