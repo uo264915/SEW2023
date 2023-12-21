@@ -24,7 +24,7 @@ section[data-type=botonera] button {
 /* Estilos para dispositivos móviles y tablets */
 
   
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     section[data-type="botonera"] {
       display: none;
     }
