@@ -1,5 +1,7 @@
 /* Estilos para una mediaquery
 que muestre la botonera en tablet y móvil */
+
+/* especificidad = 011 */
 section[data-type=botonera] {
     display: flex;
     gap: 1em;
@@ -8,11 +10,13 @@ section[data-type=botonera] {
     flex-wrap: wrap;
 }
 
+/* especificidad = 012 */
 section[data-type=botonera] h2 {
     width: 100%;
     text-align: center;
 }
 
+/* especificidad = 012 */
 section[data-type=botonera] button {
     width: calc(15% - 1em);
     height: 4em;
@@ -25,6 +29,7 @@ section[data-type=botonera] button {
 
   
   @media (min-width: 800px) {
+    /* especificidad = 011 */
     section[data-type="botonera"] {
       display: none;
     }
