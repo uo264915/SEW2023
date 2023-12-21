@@ -101,6 +101,7 @@ a{
 audio {
     display: block;
     margin-top: 1%;
+    max-width: 50%;
 }
 
 /* especificidad = 001 */
