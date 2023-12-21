@@ -22,7 +22,10 @@ header {
     font: 400 1.3em Verdana, sans-serif;
     text-transform: uppercase;
     text-align: center;
-    max-width: 90%;
+}
+
+h1 {
+    font-size: 130%;
 }
 
 /* especificidad = 001, 001, 001, 001, 001 */
